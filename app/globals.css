@@ -1,0 +1,50 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+:root {
+  /* 温白色ベース */
+  --background: #faf8f5;
+  --foreground: #2d2a26;
+
+  /* 朱色アクセント */
+  --accent: #c53d2f;
+  --accent-light: #e8685a;
+  --accent-dark: #9e2f24;
+
+  /* 藍色サブアクセント */
+  --indigo: #2b4c7e;
+  --indigo-light: #3d6098;
+  --indigo-dark: #1e3a5f;
+
+  /* 和紙風の中間色 */
+  --muted: #f0ece6;
+  --muted-foreground: #7a756d;
+  --border: #e5dfd6;
+
+  --card: #ffffff;
+  --card-foreground: #2d2a26;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-accent: var(--accent);
+  --color-accent-light: var(--accent-light);
+  --color-accent-dark: var(--accent-dark);
+  --color-indigo: var(--indigo);
+  --color-indigo-light: var(--indigo-light);
+  --color-indigo-dark: var(--indigo-dark);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --font-sans: var(--font-noto-sans);
+  --font-serif: var(--font-noto-serif);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), sans-serif;
+}
