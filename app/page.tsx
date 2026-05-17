@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
 
 export default function Home() {
@@ -93,28 +94,38 @@ export default function Home() {
       <section className="py-16 sm:py-20">
         <div className="mx-auto max-w-5xl px-4">
           <div className="grid sm:grid-cols-2 gap-8">
-            <Card className="bg-card border-border">
-              <CardContent className="pt-6">
-                <h3 className="font-serif text-xl font-bold mb-3 text-indigo">
-                  飲食店の方へ
-                </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                  月額固定費はゼロ。来店時の少額負担のみで、地域貢献と集客を両立できます。
-                  ホットペッパーのような高額掲載料は不要です。
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="bg-card border-border">
-              <CardContent className="pt-6">
-                <h3 className="font-serif text-xl font-bold mb-3 text-indigo">
-                  団体の方へ
-                </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                  子ども食堂、少年団、クラブチームなど。
-                  事務負担ほぼゼロで、安定的な支援金を毎月受け取れます。
-                </p>
-              </CardContent>
-            </Card>
+            <Link href="/for-stores" className="block">
+              <Card className="bg-card border-border hover:border-accent/40 transition-colors">
+                <CardContent className="pt-6">
+                  <h3 className="font-serif text-xl font-bold mb-3 text-indigo">
+                    飲食店の方へ
+                  </h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                    月額固定費はゼロ。来店時の少額負担のみで、地域貢献と集客を両立できます。
+                    ホットペッパーのような高額掲載料は不要です。
+                  </p>
+                  <span className="text-sm text-accent font-medium">
+                    詳しく見る →
+                  </span>
+                </CardContent>
+              </Card>
+            </Link>
+            <Link href="/for-orgs" className="block">
+              <Card className="bg-card border-border hover:border-accent/40 transition-colors">
+                <CardContent className="pt-6">
+                  <h3 className="font-serif text-xl font-bold mb-3 text-indigo">
+                    団体の方へ
+                  </h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                    子ども食堂、少年団、クラブチームなど。
+                    事務負担ほぼゼロで、安定的な支援金を毎月受け取れます。
+                  </p>
+                  <span className="text-sm text-accent font-medium">
+                    詳しく見る →
+                  </span>
+                </CardContent>
+              </Card>
+            </Link>
           </div>
         </div>
       </section>

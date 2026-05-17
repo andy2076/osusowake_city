@@ -8,6 +8,8 @@ import { Menu, X, User, LogOut } from "lucide-react";
 const navLinks = [
   { href: "/stores", label: "お店をさがす" },
   { href: "/orgs", label: "応援先をみる" },
+  { href: "/for-stores", label: "飲食店の方へ" },
+  { href: "/for-orgs", label: "団体の方へ" },
 ];
 
 export function HeaderClient({
