@@ -5,10 +5,10 @@ import { buttonVariants } from "@/components/ui/button";
 export const metadata: Metadata = {
   title: "団体の方へ | まちのおすそわけ",
   description:
-    "寄付のお願いに回らなくていい。地元の飲食店でごはんを食べるだけで、あなたの団体への支援金が届く仕組みです。都城・三股・曽於エリア。",
+    "少年団・部活動・クラブチーム・子ども食堂など、地域の子ども関連団体へ。地元の飲食店でごはんを食べるだけで、あなたの団体への支援金が届く仕組みです。都城・三股・曽於エリア。",
 };
 
-function TeaBowlIcon() {
+function HandsIcon() {
   return (
     <svg
       viewBox="0 0 200 200"
@@ -20,12 +20,13 @@ function TeaBowlIcon() {
       strokeLinejoin="round"
       className="w-24 h-24 md:w-32 md:h-32 mx-auto opacity-70"
     >
-      <path d="M 70 55 Q 65 40 75 30 Q 70 18 80 8" opacity="0.6" />
-      <path d="M 100 60 Q 95 45 105 30 Q 100 18 110 8" opacity="0.8" />
-      <path d="M 130 55 Q 125 40 135 30 Q 130 18 140 8" opacity="0.6" />
-      <ellipse cx="100" cy="95" rx="65" ry="10" />
-      <path d="M 38 97 Q 40 165 100 170 Q 160 165 162 97" />
-      <path d="M 75 170 L 75 182 Q 75 187 80 187 L 120 187 Q 125 187 125 182 L 125 170" />
+      {/* 左手 */}
+      <path d="M 30 110 Q 30 90 50 90 L 90 90 Q 100 90 100 100 L 100 130 Q 100 145 85 145 L 50 145 Q 30 145 30 125 Z" />
+      {/* 右手 (鏡像配置) */}
+      <path d="M 170 110 Q 170 90 150 90 L 110 90 Q 100 90 100 100 L 100 130 Q 100 145 115 145 L 150 145 Q 170 145 170 125 Z" />
+      {/* 渡されるもの (湯気/光のような表現) */}
+      <path d="M 85 75 Q 90 60 100 55 Q 110 60 115 75" opacity="0.6" />
+      <circle cx="100" cy="75" r="4" fill="#8B6F47" opacity="0.4" />
     </svg>
   );
 }
@@ -59,7 +60,7 @@ export default function ForOrgsPage() {
       <section className="bg-stone-100 py-28 sm:py-36 print:py-12 print:bg-white">
         <div className="mx-auto max-w-3xl px-4 text-center">
           <div className="mb-8">
-            <TeaBowlIcon />
+            <HandsIcon />
           </div>
           <p className="text-lg sm:text-xl text-foreground/60 mb-8">
             おすそわけ、です。
@@ -72,6 +73,9 @@ export default function ForOrgsPage() {
             <br />
             今日も頑張っている、あなたへ。
           </h1>
+          <p className="mt-8 text-sm text-foreground/50">
+            少年団・部活動・クラブチーム・子ども食堂・学習支援など
+          </p>
         </div>
       </section>
 
@@ -79,14 +83,14 @@ export default function ForOrgsPage() {
       <section className="bg-stone-50 py-24 sm:py-32 print:py-8 print:bg-white">
         <div className="mx-auto max-w-prose px-4 text-center">
           <h2 className="font-serif text-2xl sm:text-3xl font-bold mb-10 leading-snug">
-            「来月の食材費、足りるかな」
+            「あの会議で、また『予算が足りない』と聞いた」
           </h2>
           <div className="space-y-6 text-lg sm:text-xl leading-relaxed text-foreground/70 print:text-gray-700">
             <p>
-              朝、まだ誰もいないキッチンで、ふと、そう思ったことはありませんか。
+              ユニフォームの買い替え、楽器の修理、食材の調達。来月の遠征費、また保護者にお願いしないと──
             </p>
             <p>
-              バザー、フリマ、助成金の書類、スポンサー回り。「子どもたちのため」と続けてきた活動の裏で、気がつくと、お金集めに時間を取られている。
+              バザー、フリマ、助成金の書類、スポンサー回り。子どもたちのために続けてきた活動なのに、気がつくと、お金集めの仕事に追われている。
             </p>
           </div>
         </div>
