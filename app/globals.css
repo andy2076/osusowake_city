@@ -48,3 +48,21 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans), sans-serif;
 }
+
+/* Ken Burns zoom animation */
+@keyframes kenburns {
+  0%, 100% { transform: scale(1.0); }
+  50% { transform: scale(1.08); }
+}
+
+.animate-kenburns {
+  animation: kenburns 20s ease-in-out infinite;
+}
+
+/* Respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
