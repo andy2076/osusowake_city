@@ -8,11 +8,47 @@ export const metadata: Metadata = {
     "寄付のお願いに回らなくていい。地元の飲食店でごはんを食べるだけで、あなたの団体への支援金が届く仕組みです。都城・三股・曽於エリア。",
 };
 
-function ImagePlaceholder() {
+function TeaBowlIcon() {
   return (
-    <div className="aspect-[4/3] max-w-md mx-auto bg-stone-200 rounded-lg flex items-center justify-center print:border print:border-gray-300">
-      <span className="text-sm text-stone-400">写真エリア</span>
-    </div>
+    <svg
+      viewBox="0 0 200 200"
+      xmlns="http://www.w3.org/2000/svg"
+      stroke="#8B6F47"
+      fill="none"
+      strokeWidth="2.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="w-24 h-24 md:w-32 md:h-32 mx-auto opacity-70"
+    >
+      <path d="M 70 55 Q 65 40 75 30 Q 70 18 80 8" opacity="0.6" />
+      <path d="M 100 60 Q 95 45 105 30 Q 100 18 110 8" opacity="0.8" />
+      <path d="M 130 55 Q 125 40 135 30 Q 130 18 140 8" opacity="0.6" />
+      <ellipse cx="100" cy="95" rx="65" ry="10" />
+      <path d="M 38 97 Q 40 165 100 170 Q 160 165 162 97" />
+      <path d="M 75 170 L 75 182 Q 75 187 80 187 L 120 187 Q 125 187 125 182 L 125 170" />
+    </svg>
+  );
+}
+
+function BeerMugIcon() {
+  return (
+    <svg
+      viewBox="0 0 200 200"
+      xmlns="http://www.w3.org/2000/svg"
+      stroke="#8B6F47"
+      fill="none"
+      strokeWidth="2.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="w-32 h-32 md:w-40 md:h-40 mx-auto"
+    >
+      <path d="M 48 55 Q 58 42 73 55 Q 88 42 103 55 Q 118 42 132 55" />
+      <path d="M 50 55 L 50 165 Q 50 172 57 172 L 125 172 Q 132 172 132 165 L 132 55 Z" />
+      <path d="M 132 80 Q 162 80 162 110 Q 162 140 132 140" />
+      <line x1="65" y1="85" x2="118" y2="85" strokeDasharray="3 5" opacity="0.5" />
+      <line x1="65" y1="110" x2="118" y2="110" strokeDasharray="3 5" opacity="0.5" />
+      <line x1="65" y1="135" x2="118" y2="135" strokeDasharray="3 5" opacity="0.5" />
+    </svg>
   );
 }
 
@@ -21,11 +57,17 @@ export default function ForOrgsPage() {
     <div className="print:text-black">
       {/* Hero */}
       <section className="bg-stone-100 py-28 sm:py-36 print:py-12 print:bg-white">
-        <div className="mx-auto max-w-prose px-4 text-center">
+        <div className="mx-auto max-w-3xl px-4 text-center">
+          <div className="mb-8">
+            <TeaBowlIcon />
+          </div>
           <p className="text-lg sm:text-xl text-foreground/60 mb-8">
             おすそわけ、です。
           </p>
-          <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-bold leading-tight tracking-tight">
+          <h1
+            className="font-serif text-4xl sm:text-5xl md:text-6xl font-bold leading-tight tracking-tight"
+            style={{ wordBreak: "keep-all", overflowWrap: "anywhere" }}
+          >
             子どもたちのために、
             <br />
             今日も頑張っている、あなたへ。
@@ -54,7 +96,7 @@ export default function ForOrgsPage() {
       <section className="bg-white py-24 sm:py-32 print:py-8">
         <div className="mx-auto max-w-prose px-4 text-center">
           <div className="mb-12">
-            <ImagePlaceholder />
+            <BeerMugIcon />
           </div>
           <p className="text-lg sm:text-xl text-foreground/60 mb-6 leading-relaxed">
             ねえ、知っていますか。
@@ -111,29 +153,34 @@ export default function ForOrgsPage() {
             たった、ひとつ。
           </h2>
           <p className="font-serif text-xl sm:text-2xl font-bold text-accent mb-10 print:text-black">
-            口座を、教えてください。
+            「面倒な書類は、いりません。」
           </p>
-          <p className="text-lg sm:text-xl leading-relaxed text-foreground/70 print:text-gray-700">
-            営業も、申請書類も、集計も、月次報告書も。全部、運営がやります。
-          </p>
+          <div className="space-y-6 text-lg sm:text-xl leading-relaxed text-foreground/70 print:text-gray-700">
+            <p>
+              ご登録は、振込先の情報だけ。
+            </p>
+            <p>
+              営業も、申請書類も、集計も、月次報告書も。全部、運営がやります。
+            </p>
+          </div>
         </div>
       </section>
 
       {/* Section 5: 現実的な期待値 */}
       <section className="bg-stone-100 py-24 sm:py-32 print:py-8 print:bg-white">
         <div className="mx-auto max-w-prose px-4 text-center">
-          <p className="text-lg sm:text-xl text-foreground font-medium mb-10">
-            正直に書きます。
+          <p className="text-lg sm:text-xl text-foreground/60 mb-10">
+            どれくらい届くか、お伝えしておきます。
           </p>
           <div className="space-y-6 text-lg sm:text-xl leading-relaxed text-foreground/70 print:text-gray-700">
             <p>
-              最初の数ヶ月は、月¥500くらいかもしれません。月¥3,000かもしれません。
+              最初の数ヶ月は、月¥500ほどかもしれません。月¥3,000かもしれません。
             </p>
             <p className="text-foreground font-medium">
               でも、ちりつも、です。
             </p>
             <p>
-              何もしなくても、毎月、確実に積み上がります。1年後、振り返ったとき、「あって良かった」と思える額になっているはず。
+              何もしなくても、毎月、確実に積み上がります。1年後、振り返ったとき、活動の支えになっているはず。
             </p>
           </div>
         </div>
@@ -144,10 +191,10 @@ export default function ForOrgsPage() {
         <div className="mx-auto max-w-prose px-4 text-center">
           <div className="space-y-6 text-lg sm:text-xl leading-relaxed text-foreground/60 print:text-gray-600">
             <p>
-              ホットペッパーじゃありません。ふるさと納税でもありません。
+              大きな仕組みでは、ありません。全国の有名サイトでも、ありません。
             </p>
             <p>
-              都城・三股・曽於、ここだけの、小さくて、確かな仕組み。
+              都城・三股・曽於、ここだけの、小さくて、確かな仕組みです。
             </p>
           </div>
           <p className="mt-10 text-lg sm:text-xl leading-relaxed text-foreground/80 print:text-gray-700">
